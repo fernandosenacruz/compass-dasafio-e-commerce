@@ -1,0 +1,28 @@
+{
+  "name": "compass-dasafio-e-commerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && npm run copy",
+    "copy": "cp src/index.html dist/src/index.html && cp -R src/style.css dist/src/style.css && cp -R src/public dist/src",
+    "start": "node dist/server.js",
+    "dev": "npm run build && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fernandosenacruz/compass-dasafio-e-commerce.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/fernandosenacruz/compass-dasafio-e-commerce/issues"
+  },
+  "homepage": "https://github.com/fernandosenacruz/compass-dasafio-e-commerce#readme",
+  "devDependencies": {
+    "@types/node": "^22.13.9",
+    "typescript": "^5.8.2"
+  }
+}
