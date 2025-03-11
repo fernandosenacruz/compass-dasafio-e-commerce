@@ -18,7 +18,6 @@ body {
 }
 
 /* header */
-
 .header {
   display: flex;
   flex-direction: row;
@@ -90,7 +89,6 @@ body {
 }
 
 /* home */
-
 .banner {
   width: 100%;
   height: 628px;
@@ -140,7 +138,6 @@ body {
 }
 
 /* novelty */
-
 .novelty {
   display: flex;
   flex-direction: column;

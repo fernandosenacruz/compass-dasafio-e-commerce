@@ -27,6 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     );
     app.appendChild(dividerNovelty);
-    app.appendChild(createBrands({ brandCards: brands, id: 'brands' }));
+    app.appendChild(createBrands({ brandCards: brands, id: 'marchi' }));
   }
 });
