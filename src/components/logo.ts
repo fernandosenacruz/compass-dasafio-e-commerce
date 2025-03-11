@@ -1,12 +1,11 @@
 export function createLogo(): HTMLElement {
-  const logo = document.createElement('logo');
+  const logo = document.createElement('div');
+  logo.className = 'logo';
   logo.innerHTML = `
-    <div class="logo">
-      <img src="/public/assets/blue-teddy-bear-01.svg" alt="Logo" />
-      <div class="logo-text">
-        <spam>Teddy</spam>
-        <spam>Shop</spam>
-      </div>
+    <img src="/public/assets/blue-teddy-bear-01.svg" alt="Logo" />
+    <div class="logo-text">
+      <spam>Teddy</spam>
+      <spam>Shop</spam>
     </div>
   `;
   return logo;
