@@ -12,7 +12,8 @@ import { getGiftCardsPerSlide } from './utils/getGiftCardsPerSlide.js';
 document.addEventListener('DOMContentLoaded', () => {
   const app = document.getElementById('app');
   if (app) {
-    const brands = mockBrandCards.filter((brand) => brand.id <= 3);
+    const brands = mockBrandCards.filter((brand) => brand.id <= 4);
+    const brands2 = mockBrandCards.filter((brand) => brand.id > 4);
 
     app.appendChild(createSpecialOffer());
     app.appendChild(createHeader());
@@ -56,5 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     );
     app.appendChild(divider);
+    app.appendChild(createBrands({ brandCards: brands2, id: 'marchi-02' }));
   }
 });
