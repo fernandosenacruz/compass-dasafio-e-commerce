@@ -4,6 +4,7 @@ import { createBanner } from './components/banner.js';
 import { createNovalty } from './components/novelty.js';
 import { createDivider } from './components/divider.js';
 import { createBrands } from './components/brands.js';
+import { createSectionGiftCards } from './components/sectionGiftCards.js';
 
 import { mockBrandCards } from './data.js';
 
@@ -28,5 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
     );
     app.appendChild(dividerNovelty);
     app.appendChild(createBrands({ brandCards: brands, id: 'marchi' }));
+    app.appendChild(createSectionGiftCards());
   }
 });

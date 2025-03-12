@@ -80,3 +80,48 @@ export const mockBrandCards = [
     price: 30,
   },
 ];
+
+export const mockGiftCards = [
+  {
+    id: 1,
+    title: 'Spedizioni sicure',
+    image: './public/assets/delivery-truck.svg',
+    description:
+      'Offriamo consegne rapide per garantirti che il tuo peluche arrivi a destinazione in perfette condizioni.',
+  },
+  {
+    id: 2,
+    title: 'Materiali di qualità',
+    image: './public/assets/quality-seal.png',
+    description:
+      'Siamo impegnati a utilizzare materiali di qualità per i nostri peluche, per garantirti un prodotto che durerà nel tempo.',
+  },
+  {
+    id: 3,
+    title: 'Servizio eccellente',
+    image: './public/assets/crown.svg',
+    description:
+      'La nostra assistenza clienti è a tua disposizione per rispondere a tutte le tue domande e risolvere qualsiasi problema.',
+  },
+  {
+    id: 4,
+    title: 'Spedizioni sicure',
+    image: './public/assets/delivery-truck.svg',
+    description:
+      'Offriamo consegne rapide per garantirti che il tuo peluche arrivi a destinazione in perfette condizioni.',
+  },
+  {
+    id: 5,
+    title: 'Materiali di qualità',
+    image: './public/assets/quality-seal.png',
+    description:
+      'Siamo impegnati a utilizzare materiali di qualità per i nostri peluche, per garantirti un prodotto che durerà nel tempo.',
+  },
+  {
+    id: 6,
+    title: 'Servizio eccellente',
+    image: './public/assets/crown.svg',
+    description:
+      'La nostra assistenza clienti è a tua disposizione per rispondere a tutte le tue domande e risolvere qualsiasi problema.',
+  },
+];
