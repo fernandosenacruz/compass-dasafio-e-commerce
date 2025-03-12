@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
       createDivider({
         image: './public/assets/green-flower.svg',
         text: 'Acquista per la primavera',
-        className: 'divider-novelty-container',
+        className: 'divider-container',
       })
     );
     app.appendChild(dividerNovelty);
@@ -35,9 +35,26 @@ document.addEventListener('DOMContentLoaded', () => {
     app.appendChild(createSectionGiftCards(mockGiftCards, giftCardsPerSlide));
 
     window.addEventListener('resize', () => {
-      app.removeChild(app.lastElementChild as HTMLElement);
-      const newCardsPerSlide = getGiftCardsPerSlide();
-      app.appendChild(createSectionGiftCards(mockGiftCards, newCardsPerSlide));
+      const giftCardsSection = app.querySelector('#carte_regalo');
+      if (giftCardsSection) {
+        const newCardsPerSlide = getGiftCardsPerSlide();
+        const newGiftCardsSection = createSectionGiftCards(
+          mockGiftCards,
+          newCardsPerSlide
+        );
+        app.replaceChild(newGiftCardsSection, giftCardsSection);
+      }
     });
+
+    const divider = document.createElement('div');
+    divider.className = 'divider-gift-cads-container';
+    divider.appendChild(
+      createDivider({
+        image: './public/assets/blue-teddy-bear-01.svg',
+        text: 'I Peluche più ricercati',
+        className: 'divider-container',
+      })
+    );
+    app.appendChild(divider);
   }
 });

@@ -205,17 +205,31 @@ body {
 }
 
 /* divider */
-.divider-novelty {
+.divider-novelty,
+.divider-gift-cads-container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 123px;
-  background-color: var(--color-orange-2);
   margin-top: -20px;
 }
 
-.divider-novelty-container {
+.divider-novelty {
+  background-color: var(--color-orange-2);
+}
+
+.divider-gift-cads-container {
+  background: linear-gradient(
+    to bottom,
+    var(--color-green-2) 0px,
+    var(--color-green-2) 65px,
+    var(--color-orange-2) 0px,
+    var(--color-orange-2) 100%
+  );
+}
+
+.divider-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -224,14 +238,15 @@ body {
   height: 67px;
   border-radius: 62px;
   border: 3px solid var(--color-ogre);
+  box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.25);
 }
 
-.divider-novelty-container-img {
+.divider-container-img {
   width: 90px;
   height: 58px;
 }
 
-.divider-novelty-container-text {
+.divider-container-text {
   font-weight: 500;
   font-size: 36px;
   font-style: italic;
@@ -453,17 +468,17 @@ body {
     font-size: 12px;
   }
 
-  .divider-novelty-container {
+  .divider-container {
     width: 245px;
     height: auto;
   }
 
-  .divider-novelty-container-img {
+  .divider-container-img {
     width: 70px;
     height: auto;
   }
 
-  .divider-novelty-container-text {
+  .divider-container-text {
     font-weight: 400;
     font-size: 16px;
   }
@@ -526,17 +541,17 @@ body {
     font-size: 14px;
   }
 
-  .divider-novelty-container {
+  .divider-container {
     width: 280px;
     height: auto;
   }
 
-  .divider-novelty-container-img {
+  .divider-container-img {
     width: 80px;
     height: auto;
   }
 
-  .divider-novelty-container-text {
+  .divider-container-text {
     font-size: 20px;
   }
 
@@ -576,12 +591,12 @@ body {
     font-size: 16px;
   }
 
-  .divider-novelty-container {
+  .divider-container {
     width: 300px;
     height: auto;
   }
 
-  .divider-novelty-container-text {
+  .divider-container-text {
     font-size: 22px;
   }
 

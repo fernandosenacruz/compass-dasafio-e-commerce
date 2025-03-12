@@ -5,7 +5,8 @@ export function createSectionGiftCards(
   cards: GiftCard[],
   cardsPerSlide: number
 ): HTMLElement {
-  const container = document.createElement('div');
+  const container = document.createElement('section');
+  container.id = 'carte_regalo';
   container.className = 'gift-cards-section';
 
   const header = document.createElement('div');
