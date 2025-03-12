@@ -324,8 +324,13 @@ body {
 
 .gift-cards-title {
   display: flex;
+  justify-content: center;
   margin-top: 63px;
   margin-bottom: 108px;
+}
+
+.gift-cards-title h2 {
+  font-size: 42px;
 }
 
 .gift-card {
@@ -462,6 +467,19 @@ body {
     font-weight: 400;
     font-size: 16px;
   }
+
+  .gift-cards-title {
+    margin-bottom: 40px;
+  }
+
+  .gift-cards-title img {
+    width: 18%;
+    height: 18%;
+  }
+
+  .gift-cards-title h2 {
+    font-size: 18px;
+  }
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
@@ -521,6 +539,19 @@ body {
   .divider-novelty-container-text {
     font-size: 20px;
   }
+
+  .gift-cards-title {
+    margin-bottom: 40px;
+  }
+
+  .gift-cards-title img {
+    width: 20%;
+    height: 20%;
+  }
+
+  .gift-cards-title h2 {
+    font-size: 22px;
+  }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -552,5 +583,13 @@ body {
 
   .divider-novelty-container-text {
     font-size: 22px;
+  }
+
+  .gift-cards-title {
+    margin-bottom: 40px;
+  }
+
+  .gift-cards-title h2 {
+    font-size: 26px;
   }
 }

@@ -6,7 +6,8 @@ import { createDivider } from './components/divider.js';
 import { createBrands } from './components/brands.js';
 import { createSectionGiftCards } from './components/sectionGiftCards.js';
 
-import { mockBrandCards } from './data.js';
+import { mockBrandCards, mockGiftCards } from './data.js';
+import { getGiftCardsPerSlide } from './utils/getGiftCardsPerSlide.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = document.getElementById('app');
@@ -29,6 +30,14 @@ document.addEventListener('DOMContentLoaded', () => {
     );
     app.appendChild(dividerNovelty);
     app.appendChild(createBrands({ brandCards: brands, id: 'marchi' }));
-    app.appendChild(createSectionGiftCards());
+
+    const giftCardsPerSlide = getGiftCardsPerSlide();
+    app.appendChild(createSectionGiftCards(mockGiftCards, giftCardsPerSlide));
+
+    window.addEventListener('resize', () => {
+      app.removeChild(app.lastElementChild as HTMLElement);
+      const newCardsPerSlide = getGiftCardsPerSlide();
+      app.appendChild(createSectionGiftCards(mockGiftCards, newCardsPerSlide));
+    });
   }
 });

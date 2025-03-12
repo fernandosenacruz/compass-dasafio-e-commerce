@@ -1,7 +1,10 @@
+import { GiftCard } from './giftCards.js';
 import { createGiftCardsSlider } from './slider.js';
-import { mockGiftCards } from '../data.js';
 
-export function createSectionGiftCards(): HTMLElement {
+export function createSectionGiftCards(
+  cards: GiftCard[],
+  cardsPerSlide: number
+): HTMLElement {
   const container = document.createElement('div');
   container.className = 'gift-cards-section';
 
@@ -13,7 +16,7 @@ export function createSectionGiftCards(): HTMLElement {
     <img src="./public/assets/beige-flower.png" alt="beige-flower" />
   `;
   container.appendChild(header);
-  container.appendChild(createGiftCardsSlider(mockGiftCards, 3));
+  container.appendChild(createGiftCardsSlider(cards, cardsPerSlide));
 
   return container;
 }
