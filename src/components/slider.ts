@@ -1,10 +1,11 @@
 import { GiftCard, createGiftCard } from './giftCards.js';
-import { ContentType } from './sectionGiftCards.js';
+import { CommentCard, createCommentCard } from './commentCard.js';
+import { ContentType } from './sectionContentCards.js';
 
 interface CardsSliderProps {
   className: string;
   contentType: ContentType;
-  content: GiftCard[];
+  content: GiftCard[] | CommentCard[];
   contentPerSlide: number;
 }
 
@@ -45,7 +46,10 @@ export function createCardsSlider({
     );
 
     slidecontent.forEach((content, index) => {
-      const contentEl = createGiftCard(content);
+      const contentEl =
+        contentType === ContentType.GIFT_CARDS
+          ? createGiftCard(content as GiftCard)
+          : createCommentCard(content as CommentCard);
 
       if (index === slidecontent.length - 1) {
         contentEl.style.cursor = 'pointer';

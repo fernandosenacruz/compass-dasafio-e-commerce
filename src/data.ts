@@ -125,3 +125,48 @@ export const mockGiftCards = [
       'La nostra assistenza clienti è a tua disposizione per rispondere a tutte le tue domande e risolvere qualsiasi problema.',
   },
 ];
+
+export const mockCustomerComments = [
+  {
+    id: 1,
+    name: 'Maria Cipollari',
+    position: 'Casalinga, mamma',
+    comment:
+      '"Questo peluche è fantastico! La qualità del materiale è eccezionale e la sua morbidezza lo rende perfetto per abbracciare"',
+  },
+  {
+    id: 2,
+    name: 'Claudio Boldi',
+    position: 'Operaio, genitore',
+    comment:
+      '"Non sono soddisfatto di questo peluche. Il materiale sembra economico e la cucitura è piuttosto approssimativa"',
+  },
+  {
+    id: 3,
+    name: 'Jessica Merla',
+    position: 'Pensionata, nonna',
+    comment:
+      '“Il peluche stesso è di alta qualità, con dettagli ben curati e una consistenza morbida e soffice. Consiglio vivamente questo negozio!"',
+  },
+  {
+    id: 4,
+    name: 'Ximira Pinto',
+    position: 'Casalinga, mamma',
+    comment:
+      '"Questo peluche è fantastico! La qualità del materiale è eccezionale e la sua morbidezza lo rende perfetto per abbracciare"',
+  },
+  {
+    id: 5,
+    name: 'Xablau Boldi',
+    position: 'Operaio, genitore',
+    comment:
+      '"Non sono soddisfatto di questo peluche. Il materiale sembra economico e la cucitura è piuttosto approssimativa"',
+  },
+  {
+    id: 6,
+    name: 'Xirunda Merla',
+    position: 'Pensionata, nonna',
+    comment:
+      '“Il peluche stesso è di alta qualità, con dettagli ben curati e una consistenza morbida e soffice. Consiglio vivamente questo negozio!"',
+  },
+];

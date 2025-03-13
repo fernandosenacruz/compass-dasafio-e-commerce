@@ -1,4 +1,4 @@
-export function getGiftCardsPerSlide(): number {
+export function getContentCardsPerSlide(): number {
   const width = window.innerWidth;
   if (width <= 768) {
     return 1;

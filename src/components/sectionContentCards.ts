@@ -1,4 +1,5 @@
 import { GiftCard } from './giftCards.js';
+import { CommentCard } from './commentCard.js';
 import { createCardsSlider } from './slider.js';
 
 export enum ContentType {
@@ -6,12 +7,12 @@ export enum ContentType {
   COMMENT_CARDS = 'comment-cards',
 }
 
-interface GiftCardsProps {
+interface ContentCardsProps {
   id: string;
   className: string;
   hasTitle: boolean;
   contentType: ContentType;
-  content: GiftCard[];
+  content: GiftCard[] | CommentCard[];
   contentPerSlide: number;
 }
 
@@ -22,7 +23,7 @@ export function createSectionContentSlides({
   contentType,
   content,
   contentPerSlide,
-}: GiftCardsProps): HTMLElement {
+}: ContentCardsProps): HTMLElement {
   const container = document.createElement('section');
   container.id = id;
   container.className = className;
@@ -50,6 +51,14 @@ export function createSectionContentSlides({
       );
       break;
     case ContentType.COMMENT_CARDS:
+      container.appendChild(
+        createCardsSlider({
+          className: 'comment-cards-slider',
+          contentType,
+          content,
+          contentPerSlide,
+        })
+      );
       break;
   }
   return container;
