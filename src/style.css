@@ -206,7 +206,8 @@ body {
 
 /* divider */
 .divider-novelty,
-.divider-gift-cads-container {
+.divider-gift-cads-container,
+.divider-custom-stuffed-animal-cads-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -229,6 +230,16 @@ body {
   );
 }
 
+.divider-custom-stuffed-animal-cads-container {
+  background: linear-gradient(
+    to bottom,
+    var(--color-orange-2) 0px,
+    var(--color-orange-2) 65px,
+    var(--color-green-2) 0px,
+    var(--color-green-2) 100%
+  );
+}
+
 .divider-container {
   display: flex;
   justify-content: space-around;
@@ -239,11 +250,6 @@ body {
   border-radius: 62px;
   border: 3px solid var(--color-ogre);
   box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.25);
-}
-
-.divider-container-img {
-  width: 90px;
-  height: 58px;
 }
 
 .divider-container-text {
@@ -579,11 +585,6 @@ body {
     height: auto;
   }
 
-  .divider-container-img {
-    width: 70px;
-    height: auto;
-  }
-
   .divider-container-text {
     font-weight: 400;
     font-size: 16px;
@@ -690,11 +691,6 @@ body {
 
   .divider-container {
     width: 280px;
-    height: auto;
-  }
-
-  .divider-container-img {
-    width: 80px;
     height: auto;
   }
 

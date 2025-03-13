@@ -61,5 +61,16 @@ document.addEventListener('DOMContentLoaded', () => {
     app.appendChild(createBrands({ brandCards: brands2, id: 'marchi-02' }));
 
     app.appendChild(createCustomStuffedAnimal());
+
+    const divider2 = document.createElement('div');
+    divider2.className = 'divider-custom-stuffed-animal-cads-container';
+    divider2.appendChild(
+      createDivider({
+        image: './public/assets/green-heart.svg',
+        text: 'Opinioni dei nostri clienti',
+        className: 'divider-container',
+      })
+    );
+    app.appendChild(divider2);
   }
 });
