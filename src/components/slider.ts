@@ -1,18 +1,28 @@
-import { GiftCard } from './giftCards.js';
+import { GiftCard, createGiftCard } from './giftCards.js';
+import { ContentType } from './sectionGiftCards.js';
 
-export function createGiftCardsSlider(
-  cards: GiftCard[],
-  cardsPerSlide: number
-): HTMLElement {
+interface CardsSliderProps {
+  className: string;
+  contentType: ContentType;
+  content: GiftCard[];
+  contentPerSlide: number;
+}
+
+export function createCardsSlider({
+  className,
+  contentType,
+  content,
+  contentPerSlide,
+}: CardsSliderProps): HTMLElement {
   const sliderContainer = document.createElement('div');
-  sliderContainer.className = 'gift-cards-slider';
+  sliderContainer.className = className;
 
   const slidesWrapper = document.createElement('div');
   slidesWrapper.className = 'slides-wrapper';
   slidesWrapper.style.display = 'flex';
   slidesWrapper.style.transition = 'transform 0.3s ease-in-out';
 
-  const numSlides = Math.ceil(cards.length / cardsPerSlide);
+  const numSlides = Math.ceil(content.length / contentPerSlide);
   let currentSlide = 0;
 
   function goToSlide(slideIndex: number) {
@@ -28,21 +38,18 @@ export function createGiftCardsSlider(
     slide.style.display = 'flex';
     slide.style.justifyContent = 'space-around';
 
-    const startIndex = i * cardsPerSlide;
-    const slideCards = cards.slice(startIndex, startIndex + cardsPerSlide);
+    const startIndex = i * contentPerSlide;
+    const slidecontent = content.slice(
+      startIndex,
+      startIndex + contentPerSlide
+    );
 
-    slideCards.forEach((card, index) => {
-      const cardEl = document.createElement('div');
-      cardEl.className = 'gift-card';
-      cardEl.innerHTML = `
-        <img src="${card.image}" alt="${card.title}" />
-        <h3>${card.title}</h3>
-        <p>${card.description}</p>
-      `;
+    slidecontent.forEach((content, index) => {
+      const contentEl = createGiftCard(content);
 
-      if (index === slideCards.length - 1) {
-        cardEl.style.cursor = 'pointer';
-        cardEl.addEventListener('click', () => {
+      if (index === slidecontent.length - 1) {
+        contentEl.style.cursor = 'pointer';
+        contentEl.addEventListener('click', () => {
           if (currentSlide < numSlides - 1) {
             goToSlide(currentSlide + 1);
           } else {
@@ -51,7 +58,7 @@ export function createGiftCardsSlider(
         });
       }
 
-      slide.appendChild(cardEl);
+      slide.appendChild(contentEl);
     });
 
     slidesWrapper.appendChild(slide);

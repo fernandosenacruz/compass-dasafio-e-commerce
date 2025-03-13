@@ -4,7 +4,10 @@ import { createBanner } from './components/banner.js';
 import { createNovalty } from './components/novelty.js';
 import { createDivider } from './components/divider.js';
 import { createBrands } from './components/brands.js';
-import { createSectionGiftCards } from './components/sectionGiftCards.js';
+import {
+  ContentType,
+  createSectionContentSlides,
+} from './components/sectionGiftCards.js';
 import { createCustomStuffedAnimal } from './components/customStuffedAnimal.js';
 
 import { getGiftCardsPerSlide } from './utils/getGiftCardsPerSlide.js';
@@ -34,16 +37,29 @@ document.addEventListener('DOMContentLoaded', () => {
     app.appendChild(createBrands({ brandCards: brands, id: 'marchi' }));
 
     const giftCardsPerSlide = getGiftCardsPerSlide();
-    app.appendChild(createSectionGiftCards(mockGiftCards, giftCardsPerSlide));
+    app.appendChild(
+      createSectionContentSlides({
+        id: 'carte_regalo',
+        className: 'gift-cards-section',
+        hasTitle: true,
+        contentType: ContentType.GIFT_CARDS,
+        content: mockGiftCards,
+        contentPerSlide: giftCardsPerSlide,
+      })
+    );
 
     window.addEventListener('resize', () => {
       const giftCardsSection = app.querySelector('#carte_regalo');
       if (giftCardsSection) {
         const newCardsPerSlide = getGiftCardsPerSlide();
-        const newGiftCardsSection = createSectionGiftCards(
-          mockGiftCards,
-          newCardsPerSlide
-        );
+        const newGiftCardsSection = createSectionContentSlides({
+          id: 'carte_regalo',
+          className: 'gift-cards-section',
+          hasTitle: true,
+          contentType: ContentType.GIFT_CARDS,
+          content: mockGiftCards,
+          contentPerSlide: newCardsPerSlide,
+        });
         app.replaceChild(newGiftCardsSection, giftCardsSection);
       }
     });
