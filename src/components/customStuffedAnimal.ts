@@ -35,7 +35,8 @@ export function createCustomStuffedAnimal(): HTMLElement {
               'Ma affrettati, le offerte sono per tempo limitato!',
             buttonText: 'Scopri di più  >',
             className: 'custom-stuffed-animal-secondary-card',
-            classNameContent: 'custom-stuffed-animal-secondary-card-content',
+            classNameContent:
+              'custom-stuffed-animal-secondary-card-content-primary',
           }).outerHTML
         }
         ${
@@ -48,7 +49,8 @@ export function createCustomStuffedAnimal(): HTMLElement {
               'Offriamo un servizio di personalizzazione per molti dei nostri peluche, rendendoli unici e indimenticabili.',
             buttonText: 'Scopri di più  >',
             className: 'custom-stuffed-animal-secondary-card',
-            classNameContent: 'custom-stuffed-animal-secondary-card-content',
+            classNameContent:
+              'custom-stuffed-animal-secondary-card-content-secondary',
           }).outerHTML
         }
       </div>

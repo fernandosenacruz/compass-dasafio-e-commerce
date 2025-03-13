@@ -430,6 +430,7 @@ body {
 .custom-stuffed-animal-cards {
   display: flex;
   flex-wrap: wrap !important;
+  justify-content: center;
   gap: 30px;
   padding: 0 50px;
   margin-bottom: 50px;
@@ -462,7 +463,8 @@ body {
   font-size: 40px;
 }
 
-.custom-stuffed-animal-main-card-content button {
+.custom-stuffed-animal-main-card-content button,
+.custom-stuffed-animal-secondary-card button {
   margin-top: 40px;
   background-color: transparent;
   border: none;
@@ -470,13 +472,50 @@ body {
 }
 
 .custom-stuffed-animal-secondary-cards {
-  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
 .custom-stuffed-animal-secondary-card {
   display: flex;
   width: 640px;
-  height: 338px;
+  height: 330px;
+}
+
+.custom-stuffed-animal-secondary-card img {
+  border-top-left-radius: 44px;
+  border-bottom-left-radius: 44px;
+}
+
+.custom-stuffed-animal-secondary-card-content-primary,
+.custom-stuffed-animal-secondary-card-content-secondary {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-top-right-radius: 44px;
+  border-bottom-right-radius: 44px;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.custom-stuffed-animal-secondary-card-content-primary h3,
+.custom-stuffed-animal-secondary-card-content-secondary h3 {
+  font-size: 24px;
+  margin: 0 auto;
+}
+
+.custom-stuffed-animal-secondary-card-content-primary p,
+.custom-stuffed-animal-secondary-card-content-secondary p {
+  padding-right: 20px;
+}
+
+.custom-stuffed-animal-secondary-card-content-primary {
+  background-color: var(--color-green-2);
+}
+
+.custom-stuffed-animal-secondary-card-content-secondary {
+  background-color: var(--color-orange);
 }
 
 @media screen and (max-width: 480px) {
@@ -559,9 +598,49 @@ body {
     height: 18%;
   }
 
-  .gift-cards-title h2,
-  .custom-stuffed-animal-title h2 {
+  .slide {
+    width: 100%;
+  }
+
+  .gift-cards-title h2 {
     font-size: 18px;
+  }
+
+  .custom-stuffed-animal-main-card,
+  .custom-stuffed-animal-secondary-card {
+    width: 320px;
+    height: auto;
+  }
+
+  .custom-stuffed-animal-title img {
+    width: 10%;
+  }
+
+  .custom-stuffed-animal-title h2 {
+    font-size: 14px;
+  }
+
+  .custom-stuffed-animal-main-card img {
+    width: 100%;
+  }
+
+  .custom-stuffed-animal-main-card-content h3 {
+    font-size: 24px;
+  }
+
+  .custom-stuffed-animal-secondary-card {
+    flex-direction: column;
+  }
+
+  .custom-stuffed-animal-secondary-card img {
+    border-top-right-radius: 44px;
+    border-bottom-left-radius: 0;
+  }
+
+  .custom-stuffed-animal-secondary-card-content-primary,
+  .custom-stuffed-animal-secondary-card-content-secondary {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 44px;
   }
 }
 
@@ -632,9 +711,41 @@ body {
     height: 20%;
   }
 
-  .gift-cards-title h2,
-  .custom-stuffed-animal-title h2 {
+  .gift-cards-title h2 {
     font-size: 22px;
+  }
+
+  .custom-stuffed-animal-main-card,
+  .custom-stuffed-animal-secondary-card {
+    width: 440px;
+    height: auto;
+  }
+
+  .custom-stuffed-animal-title img {
+    width: 10%;
+  }
+
+  .custom-stuffed-animal-title h2 {
+    font-size: 18px;
+  }
+
+  .custom-stuffed-animal-main-card img {
+    width: 100%;
+  }
+
+  .custom-stuffed-animal-secondary-card {
+    flex-direction: column;
+  }
+
+  .custom-stuffed-animal-secondary-card img {
+    border-top-right-radius: 44px;
+    border-bottom-left-radius: 0;
+  }
+
+  .custom-stuffed-animal-secondary-card-content-primary,
+  .custom-stuffed-animal-secondary-card-content-secondary {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 44px;
   }
 }
 
@@ -673,8 +784,15 @@ body {
     margin-bottom: 40px;
   }
 
-  .gift-cards-title h2,
-  .custom-stuffed-animal-title h2 {
+  .gift-cards-title h2 {
     font-size: 26px;
+  }
+
+  .custom-stuffed-animal-title img {
+    width: 15%;
+  }
+
+  .custom-stuffed-animal-title h2 {
+    font-size: 22px;
   }
 }
