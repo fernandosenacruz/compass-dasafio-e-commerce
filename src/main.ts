@@ -5,9 +5,10 @@ import { createNovalty } from './components/novelty.js';
 import { createDivider } from './components/divider.js';
 import { createBrands } from './components/brands.js';
 import { createSectionGiftCards } from './components/sectionGiftCards.js';
+import { createCustomStuffedAnimal } from './components/customStuffedAnimal.js';
 
-import { mockBrandCards, mockGiftCards } from './data.js';
 import { getGiftCardsPerSlide } from './utils/getGiftCardsPerSlide.js';
+import { mockBrandCards, mockGiftCards } from './data.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = document.getElementById('app');
@@ -58,5 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     );
     app.appendChild(divider);
     app.appendChild(createBrands({ brandCards: brands2, id: 'marchi-02' }));
+
+    app.appendChild(createCustomStuffedAnimal());
   }
 });

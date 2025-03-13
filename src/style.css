@@ -344,7 +344,8 @@ body {
   margin-bottom: 108px;
 }
 
-.gift-cards-title h2 {
+.gift-cards-title h2,
+.custom-stuffed-animal-title h2 {
   font-size: 42px;
 }
 
@@ -410,6 +411,72 @@ body {
 
 .slider-marker.active {
   background-color: var(--color-black-3);
+}
+
+/* custom-stuffed-animal */
+.custom-stuffed-animal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-orange-2);
+}
+
+.custom-stuffed-animal-title {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 20px;
+}
+
+.custom-stuffed-animal-cards {
+  display: flex;
+  flex-wrap: wrap !important;
+  gap: 30px;
+  padding: 0 50px;
+  margin-bottom: 50px;
+}
+
+.custom-stuffed-animal-main-card,
+.custom-stuffed-animal-secondary-card {
+  border: 3px solid var(--color-yellow);
+  border-radius: 42px;
+  box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.custom-stuffed-animal-main-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 640px;
+  height: 691px;
+}
+
+.custom-stuffed-animal-main-card-content {
+  padding: 0 40px;
+  height: 100%;
+  border-bottom-left-radius: 42px;
+  border-bottom-right-radius: 42px;
+  background-color: var(--color-white);
+}
+
+.custom-stuffed-animal-main-card-content h3 {
+  font-size: 40px;
+}
+
+.custom-stuffed-animal-main-card-content button {
+  margin-top: 40px;
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+}
+
+.custom-stuffed-animal-secondary-cards {
+  gap: 30px;
+}
+
+.custom-stuffed-animal-secondary-card {
+  display: flex;
+  width: 640px;
+  height: 338px;
 }
 
 @media screen and (max-width: 480px) {
@@ -492,7 +559,8 @@ body {
     height: 18%;
   }
 
-  .gift-cards-title h2 {
+  .gift-cards-title h2,
+  .custom-stuffed-animal-title h2 {
     font-size: 18px;
   }
 }
@@ -564,7 +632,8 @@ body {
     height: 20%;
   }
 
-  .gift-cards-title h2 {
+  .gift-cards-title h2,
+  .custom-stuffed-animal-title h2 {
     font-size: 22px;
   }
 }
@@ -604,7 +673,8 @@ body {
     margin-bottom: 40px;
   }
 
-  .gift-cards-title h2 {
+  .gift-cards-title h2,
+  .custom-stuffed-animal-title h2 {
     font-size: 26px;
   }
 }
