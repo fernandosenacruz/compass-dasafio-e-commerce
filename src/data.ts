@@ -170,3 +170,149 @@ export const mockCustomerComments = [
       '“Il peluche stesso è di alta qualità, con dettagli ben curati e una consistenza morbida e soffice. Consiglio vivamente questo negozio!"',
   },
 ];
+
+export enum SectionLinks {
+  PER_AIUTARE = 'Per aiutare',
+  CHI_SIAMO = 'Chi siamo',
+  COMMERCIO = 'Commercio',
+  SUPPORTO = 'Supporto',
+  SOCIAL = 'Social',
+}
+
+export const mockLinks = {
+  help: [
+    {
+      id: 1,
+      name: 'Consegna',
+      section: SectionLinks.PER_AIUTARE,
+    },
+    {
+      id: 2,
+      name: 'Ritorno',
+      section: SectionLinks.PER_AIUTARE,
+    },
+    {
+      id: 3,
+      name: 'Domande frequenti',
+      section: SectionLinks.PER_AIUTARE,
+    },
+    {
+      id: 4,
+      name: 'Pagamento sicuro',
+      section: SectionLinks.PER_AIUTARE,
+    },
+    {
+      id: 5,
+      name: 'Privacy e sicurezza',
+      section: SectionLinks.PER_AIUTARE,
+    },
+  ],
+  about: [
+    {
+      id: 6,
+      name: 'La nostra storia',
+      section: SectionLinks.CHI_SIAMO,
+    },
+    {
+      id: 7,
+      name: 'Sicurezza e idonetà',
+      section: SectionLinks.CHI_SIAMO,
+    },
+    {
+      id: 8,
+      name: 'Generali T $ C',
+      section: SectionLinks.CHI_SIAMO,
+    },
+    {
+      id: 9,
+      name: 'Commercio equo',
+      section: SectionLinks.CHI_SIAMO,
+    },
+    {
+      id: 10,
+      name: 'Mappa del sito',
+      section: SectionLinks.CHI_SIAMO,
+    },
+  ],
+  commerce: [
+    {
+      id: 11,
+      name: 'Rivenditori esterni',
+      section: SectionLinks.COMMERCIO,
+    },
+    {
+      id: 12,
+      name: 'Diventa un rivenditoore',
+      section: SectionLinks.COMMERCIO,
+    },
+    {
+      id: 13,
+      name: 'Fiere e Convegni',
+      section: SectionLinks.COMMERCIO,
+    },
+    {
+      id: 14,
+      name: 'Termini e condizioni',
+      section: SectionLinks.COMMERCIO,
+    },
+    {
+      id: 15,
+      name: 'Pubbliche relazioni',
+      section: SectionLinks.COMMERCIO,
+    },
+  ],
+  support: [
+    {
+      id: 16,
+      name: 'Il mio conto',
+      section: SectionLinks.SUPPORTO,
+    },
+    {
+      id: 17,
+      name: 'Contattaci',
+      section: SectionLinks.SUPPORTO,
+    },
+    {
+      id: 18,
+      name: 'Spedizione',
+      section: SectionLinks.SUPPORTO,
+    },
+    {
+      id: 19,
+      name: 'Spedizione estiva',
+      section: SectionLinks.SUPPORTO,
+    },
+    {
+      id: 20,
+      name: 'Richiamare',
+      section: SectionLinks.SUPPORTO,
+    },
+  ],
+  social: [
+    {
+      id: 21,
+      name: 'Facebook',
+      section: SectionLinks.SOCIAL,
+    },
+    {
+      id: 22,
+      name: 'Instagram',
+      section: SectionLinks.SOCIAL,
+    },
+    {
+      id: 23,
+      name: 'Twitter',
+      section: SectionLinks.SOCIAL,
+    },
+    {
+      id: 24,
+      name: 'YouTube',
+      section: SectionLinks.SOCIAL,
+    },
+    {
+      id: 25,
+      name: 'Pinterest',
+      section: SectionLinks.SOCIAL,
+    },
+  ],
+};

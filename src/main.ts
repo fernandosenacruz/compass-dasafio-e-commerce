@@ -9,6 +9,7 @@ import {
   ContentType,
   createSectionContentSlides,
 } from './components/sectionContentCards.js';
+import { createNewsLetter } from './components/newsletter.js';
 import { createFooter } from './components/footer.js';
 
 import { mockBrandCards, mockGiftCards, mockCustomerComments } from './data.js';
@@ -90,6 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     );
 
+    app.appendChild(createNewsLetter());
     app.appendChild(createFooter());
 
     const sectionsToUpdate: SectionData<any>[] = [
