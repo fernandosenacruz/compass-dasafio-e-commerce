@@ -9,6 +9,7 @@ import {
   ContentType,
   createSectionContentSlides,
 } from './components/sectionContentCards.js';
+import { createFooter } from './components/footer.js';
 
 import { mockBrandCards, mockGiftCards, mockCustomerComments } from './data.js';
 
@@ -88,6 +89,8 @@ document.addEventListener('DOMContentLoaded', () => {
         contentPerSlide: contentCardsPerSlide,
       })
     );
+
+    app.appendChild(createFooter());
 
     const sectionsToUpdate: SectionData<any>[] = [
       {

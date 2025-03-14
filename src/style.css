@@ -568,6 +568,15 @@ body {
   margin: 0;
 }
 
+/* footer */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 48px;
+  height: 109px;
+}
+
 @media screen and (max-width: 480px) {
   .spacial-offer p {
     font-size: 8px;
@@ -686,6 +695,14 @@ body {
   .custom-stuffed-animal-secondary-card-content-secondary {
     border-top-right-radius: 0;
     border-bottom-left-radius: 44px;
+  }
+
+  .footer {
+    gap: 10px;
+  }
+
+  .footer p {
+    text-align: right;
   }
 }
 
