@@ -1,6 +1,5 @@
 FROM node:22-alpine AS builder
 
-# ajusta para deploy no render.com
 WORKDIR /opt/render/project
 
 COPY package*.json ./
