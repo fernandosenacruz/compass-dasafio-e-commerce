@@ -1,6 +1,6 @@
 FROM node:22-alpine AS builder
 
-WORKDIR /opt/render/project/src
+WORKDIR ~/project/src
 
 COPY package*.json ./
 RUN npm install
@@ -8,13 +8,14 @@ RUN npm install
 COPY . .
 
 RUN npm run build
+RUN ls -R dist
 
 FROM node:22-alpine
 
-WORKDIR /opt/render/project/src
+WORKDIR ~/project/src
 
-COPY --from=builder /opt/render/project/src/dist ./dist
-COPY --from=builder /opt/render/project/src/package*.json ./
+COPY --from=builder ~/project/src/dist ./dist
+COPY --from=builder ~/project/src/package*.json ./
 
 EXPOSE 3000
 
