@@ -51,7 +51,6 @@ export function createNewsletterForm(): HTMLElement {
 
   newsletterForm.addEventListener('submit', (e: Event) => {
     e.preventDefault();
-    console.log('submit', emailInput.value);
     const email = emailInput.value.trim();
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

@@ -1,21 +1,29 @@
 import { createLinks } from './links.js';
 import { createNewsletterForm } from './newsletterForm.js';
-
 import { SectionLinks, mockLinks } from '../data.js';
 
 export function createNewsLetter(): HTMLElement {
   const newsletter = document.createElement('section');
   newsletter.id = 'chi_siamo';
   newsletter.className = 'newsletter-section';
+
   const headerElement = document.createElement('div');
   headerElement.className = 'newsletter-header';
-  headerElement.innerHTML = `
-    <div class="newsletter-title">
-      <h2>TeddyShop Newsletter</h2>
-      <p>Resta aggiornato sulle ultime novità, promozioni e offerte speciali.</p>
-    </div>
-    ${createNewsletterForm().outerHTML}
+
+  const titleContainer = document.createElement('div');
+  titleContainer.className = 'newsletter-title';
+  titleContainer.innerHTML = `
+    <h2>TeddyShop Newsletter</h2>
+    <p>Resta aggiornato sulle ultime novità, promozioni e offerte speciali.</p>
   `;
+  headerElement.appendChild(titleContainer);
+
+  headerElement.appendChild(createNewsletterForm());
+  newsletter.appendChild(headerElement);
+
+  const divider = document.createElement('div');
+  divider.className = 'newsletter-diviser';
+  newsletter.appendChild(divider);
 
   const linksContainer = document.createElement('div');
   linksContainer.className = 'links-container';
@@ -34,12 +42,7 @@ export function createNewsLetter(): HTMLElement {
   linksContainer.appendChild(
     createLinks({ title: SectionLinks.SOCIAL, links: mockLinks.social })
   );
-
-  newsletter.innerHTML = `
-    ${headerElement.outerHTML}
-    <div class="newsletter-diviser"></div>
-    ${linksContainer.outerHTML}
-  `;
+  newsletter.appendChild(linksContainer);
 
   return newsletter;
 }
