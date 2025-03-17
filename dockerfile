@@ -1,6 +1,7 @@
 FROM node:22-alpine AS builder
 
-WORKDIR /app
+# ajusta para deploy no render.com
+WORKDIR /opt/render/project
 
 COPY package*.json ./
 
@@ -12,10 +13,10 @@ RUN npm run build
 
 FROM node:22-alpine
 
-WORKDIR /app
+WORKDIR /opt/render/project
 
-COPY --from=builder /app/dist ./dist
-COPY --from=builder /app/package*.json ./
+COPY --from=builder /opt/render/project/dist ./dist
+COPY --from=builder /opt/render/project/package*.json ./
 
 EXPOSE 3000
 
