@@ -27,7 +27,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const brands2 = mockBrandCards.filter((brand) => brand.id > 4);
 
     app.appendChild(createSpecialOffer());
-    app.appendChild(createHeader());
+
+    const headerElement = createHeader();
+    app.appendChild(headerElement);
+
+    const menuBtn = headerElement.querySelector(
+      '#menu-btn'
+    ) as HTMLButtonElement;
+    const navOverlay = headerElement.querySelector(
+      '#nav-overlay'
+    ) as HTMLElement;
+    const closeBtn = headerElement.querySelector(
+      '#close-btn'
+    ) as HTMLButtonElement;
+
+    if (menuBtn && navOverlay && closeBtn) {
+      menuBtn.addEventListener('click', () => {
+        navOverlay.classList.add('active');
+      });
+      closeBtn.addEventListener('click', () => {
+        navOverlay.classList.remove('active');
+      });
+    }
+
     app.appendChild(createBanner());
     app.appendChild(createNovalty());
 

@@ -13,6 +13,21 @@ export function createHeader(): HTMLElement {
       <a href="#carte_regalo">Carte regalo</a>
       <a href="#chi_siamo">Chi siamo</a>
     </nav>
+
+    <button class="menu-btn" id="menu-btn">☰</button>
+
+    <aside class="nav-overlay" id="nav-overlay">
+      <button class="close-btn" id="close-btn">X</button>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#categorie">Categorie</a>
+        <a href="#novita">Novità</a>
+        <a href="#marchi">Marchi</a>
+        <a href="#carte_regalo">Carte regalo</a>
+        <a href="#chi_siamo">Chi siamo</a>
+      </nav>
+    </aside>
+
     <div class="header-icons">
       <a href="#search" class="search-icon">
         <img src="/public/assets/search-icon.svg" alt="Search" />
