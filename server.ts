@@ -7,7 +7,7 @@ import fs from 'fs';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const port: number = 3000;
+const port = process.env.PORT || 3000;
 
 const server = http.createServer((req, res) => {
   const requestUrl: string = req.url ?? '/';
