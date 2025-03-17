@@ -3,7 +3,7 @@
     "target": "ES2020",
     "module": "ESNext",
     "rootDir": "./",
-    "outDir": "./dist",
+    "outDir": "./src/dist",
     "strict": true,
     "esModuleInterop": true,
     "moduleResolution": "node"
